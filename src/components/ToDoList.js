@@ -1,25 +1,13 @@
 import React from  'react'
+import ToDo from './ToDo'
 
-const TodoList = () => (
+const TodoList = ({tasks}) => (
     <React.Fragment>
         <h1>Voici la liste</h1>
         <ul className="list-group m-3">
-                    <li className="list-group-item d-flex align-tiems-center">
-                        Ranger la vaisselle 
-                        <button className="btn btn-sm ml-auto btn-outline-success">&#x2713;</button>
-                    </li>
-                    <li className="list-group-item d-flex align-tiems-center">
-                        Répondre appel d'offres
-                        <button className="btn btn-sm ml-auto btn-outline-success">&#x2713;</button>
-                    </li>
-                    <li className="list-group-item d-flex align-tiems-center">
-                        Signer contrat
-                        <button className="btn btn-sm ml-auto btn-outline-success">&#x2713;</button>
-                    </li>
-                    <li className="list-group-item d-flex align-tiems-center">
-                        Ranger la salon
-                        <button className="btn btn-sm ml-auto btn-outline-success">&#x2713;</button>
-                    </li>
+            {
+                tasks.map((task) => <ToDo task={task} key={task.id}/>)
+            }
         </ul>
     </React.Fragment>  
     
