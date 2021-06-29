@@ -2,7 +2,7 @@ import React from  'react'
 
 const TodoList = () => (
     <React.Fragment>
-        <h1></h1>
+        <h1>Voici la liste</h1>
         <ul className="list-group m-3">
                     <li className="list-group-item d-flex align-tiems-center">
                         Ranger la vaisselle 
